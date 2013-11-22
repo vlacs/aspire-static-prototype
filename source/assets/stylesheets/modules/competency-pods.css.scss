@@ -1,0 +1,49 @@
+.competency-pod {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: $baseline;
+  padding: $baseline $baseline $baseline*4;
+  position: relative;
+  img {
+    background-color: #999;
+    float: left;
+    height: $baseline*4;
+    margin-right: $baseline;
+    width: $baseline*4;
+  }
+  h3 {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    background-color: #ccc;
+    height: $baseline*3;
+    padding: 0 $baseline;
+    position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }
+}
+.competency-pod-blank {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+  margin-bottom: $baseline;
+  padding: $baseline $baseline $baseline*4;
+  position: relative;
+  text-align: center;
+}
+
+.button {
+  @include border-radius($sub-baseline);
+  background-color: #333;
+  color: #ccc;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: $sub-baseline*1.5;
+  padding: $sub-baseline*2 $sub-baseline*4;
+  text-decoration: none;
+}

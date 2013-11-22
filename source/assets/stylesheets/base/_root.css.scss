@@ -1,6 +1,9 @@
 // -----------------------------------------------------------------------------
 // Root
 // -----------------------------------------------------------------------------
+* {
+  @include box-sizing(border-box);
+}
 
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
@@ -11,8 +14,8 @@ html {
   @if $legacy-support-for-ie {
     font-size: 100%; // 1
   }
-  font-size: $base-font-size;
-  line-height: 1.5;
+  font: $base-font-size/1.5 $sans-font-family;
+  height: 100%;
   -webkit-text-size-adjust: 100%; // 2
   -ms-text-size-adjust: 100%; // 2
 }
@@ -20,5 +23,6 @@ html {
 // Addresses margins handled incorrectly in IE6/7
 // ----------------------------------------------------------------
 body {
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }

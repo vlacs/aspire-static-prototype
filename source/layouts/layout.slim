@@ -24,8 +24,31 @@ head
   == stylesheet_link_tag "global"
   == javascript_include_tag "libs/modernizr"
   
-  body
-    == yield
+  body id="#{current_page.data.id}"
+    main#content role="main"
+      == yield
+
+      nav#top-bar
+        header#logo: h1 Virtual Learning Academy Charter School
+
+        a#side-nav-control: a href="#"
+
+        ul
+          li.alerts: a href="#alerts" Alerts <span class="alert-count">23</span>
+          li.profile
+            img src="" alt=""
+            a href="#profile" Bermon Painter
+          li.logout: a href="#logout" Logout
+
+    nav#side-nav role="navigation"
+      ul
+        li.dashboard-nav: a href="dashboard" Dashboard
+        li.competencies-nav: a href="competencies" Competencies
+        li.learning-map-nav: a href="learning-map" Learning Map
+        li.transcript-nav: a href="transcript" Transcript
+
+    footer role="contentinfo"
+
 
     == javascript_include_tag "libs/jquery", "global"
 
