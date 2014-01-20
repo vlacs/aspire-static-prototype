@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------
-// The global file concatenates a series of normalize files, 
+// The global file concatenates a series of normalize files,
 // variables, and modules so we can service as few CSS files to
 // the browser as possible.
 // ----------------------------------------------------------------
@@ -11,13 +11,14 @@
 @import "base/mixins";
 @import "base/utilities";
 
-// Normalize elements 
+// Normalize elements
 // ----------------------------------------------------------------
 @import "base/root";
 @import "base/grid";
 @import "base/code";
 @import "base/emphasis";
 @import "base/fonts";
+@import "base/forms";
 @import "base/headings";
 @import "base/html5";
 @import "base/images";
@@ -35,6 +36,7 @@
 @import "modules/side-nav";
 @import "modules/competency-pods";
 @import "modules/status-bar";
+@import "modules/search";
 
 // To be moved into modules/partials
 
@@ -51,148 +53,41 @@
   min-height: 100%;
 }
 
-#dashboard {
-  header[role="banner"]{
-    font-size: 2rem;
-    margin: $baseline*4 auto;
+// Onboarding
+// ----------------------------------------------------------------
+#onboarding {
+  .intro {
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto $baseline*3;
+    padding: $baseline*5 0;
     max-width: 800px;
     text-align: center;
-    h1 {
-      font-weight: normal;  
-    }
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  section {
-    @include clear;
-    padding-bottom: $baseline*2;
-  }
-}
-
-#competency-index {
-  aside,
-  article {
-    margin-top: $baseline*2;
-  }
-  aside {
-    border-right: 1px solid #ccc;
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    a {
-      color: #333;
-      display: block;
-      font-size: 1.2rem;
-      padding: $sub-baseline*2;
-      text-decoration: none;
-      &:hover {
-        background-color: #ccc;
-      }
-    }
-  }
-  section {
-    margin-bottom: $baseline*3;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-#competency-detail {
-  header[role="banner"] {
-    background-color: #999;
-    margin-top: $baseline*2;
-    padding: $baseline*2 $baseline*2 $baseline*4 $baseline*7;
-    position: relative;
-    h1 {
-      margin: 0;
-      padding: 0;
-    }
-    .site-map {
-      opacity: .5;
-    }
     p {
-      margin-top: $baseline;
-      max-width: 500px;
-    }
-    .badge {
-      background-color: #333;
-      height: $baseline*4;
-      position: absolute;
-        top: $baseline*2;
-        left: $baseline*2;
-      width: $baseline*4;
-    }
-    footer {
-      background-color: #ccc;
-      height: $baseline*3;
-      position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0
-    }
-    .status-bar {
-      left: $baseline*3;
-      top: $baseline;
-      right: $baseline*5;
+      font-size: 2em;
     }
   }
-  .competencies {
-    @include clear;
-    border-top: 1px solid #ccc;
-    header{
-      padding: $baseline*2;
-    }
-    ul {
-      border-left: 1px solid #ccc;
-      list-style: none;
-      margin: 0;
-      min-height: 100%;
-      padding: 0;
-    }
+  h2 {
+    font-size: 5em;
+    margin: 0;
+  }
+  .onboarding-steps {
+    font-size: 2em;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: $baseline*2 0 $baseline*2 $baseline*4;
     li {
-      border-top: 1px solid #ccc;
-      &:first-child {
-        border: 0;
-        .status-icon:before {
-          top: 0;
-        }
-      }
-      &:last-child {
-        .status-icon:before {
-          bottom: 0;
-        }
-      }
-      a {
-        color: #333;
-        display: block;
-        font-size: 1.5rem;
-        padding: $sub-baseline*3 $sub-baseline*2 $sub-baseline*3 $baseline*5;
-        position: relative;
-        text-decoration: none;
-      }
-      .status-icon {
-        @include border-radius(100px);
+      margin: $baseline*2 0;
+      position: relative;
+      &:before {
+        @include border-radius(50px);
         background-color: #ccc;
-        display: block;
-        height: $baseline*2;
+        content: "";
+        height: $baseline*4;
         position: absolute;
-          top: $sub-baseline*1.5;
-          left: $baseline*2;
-        width: $baseline*2;
-        &:before {
-          background-color: #ccc;
-          content: "";
-          display: block;
-          position: absolute;
-            top: -$sub-baseline*1.5;
-            bottom: -$sub-baseline*1.5;
-            left: $sub-baseline*2.5;
-          width: $sub-baseline;
-        }
+          top: 0;
+          left: -$baseline*4.5;
+        width: $baseline*4;
       }
     }
   }

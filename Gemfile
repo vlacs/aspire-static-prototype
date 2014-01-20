@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.2"
-gem "middleman-syntax", :git => 'git@github.com:middleman/middleman-syntax.git'
+# gem "middleman-syntax", :git => 'git@github.com:middleman/middleman-syntax.git'
 # gem "middleman-smusher"
 
 # Live-reloading plugin

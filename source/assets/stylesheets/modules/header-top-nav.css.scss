@@ -1,8 +1,9 @@
 #top-bar {
-  background-color: #ccc;
+  background-color: #333;
+  color: #efefef;
   height: $baseline*3;
   line-height: $baseline*3;
-  padding: 0 $baseline 0 $baseline*5;
+  padding: 0 $baseline 0 $baseline*9;
   position: fixed;
     top: 0;
     right: 0;
@@ -14,14 +15,31 @@
     padding: 0;
   }
   #side-nav-control {
-    background-color: #333;
+    background-color: #666;
     height: $baseline*2;
     position: absolute;
       top: $sub-baseline*1.5;
       left: $baseline;
     width: $baseline*2;
     &:after {
-      border-right: 1px dotted #333;
+      border-right: 1px dotted #666;
+      content: "";
+      display: block;
+      position: absolute;
+        top: 0;
+        right: -$baseline;
+        bottom: 0;
+    }
+  }
+  #search-control {
+    background-color: #666;
+    height: $baseline*2;
+    position: absolute;
+      top: $sub-baseline*1.5;
+      left: $baseline*5;
+    width: $baseline*2;
+    &:after {
+      border-right: 1px dotted #666;
       content: "";
       display: block;
       position: absolute;
@@ -54,7 +72,7 @@
       padding: 0;
     }
     a {
-      color: #333;
+      color: #ccc;
       display: block;
       text-decoration: none;
     }
@@ -62,8 +80,8 @@
       padding-left: $baseline*2.5;
     }
     img {
-      @include border-radius($sub-baseline);
-      background-color: #333;
+      @include border-radius(60px);
+      background-color: #ccc;
       height: $baseline*2;
       position: absolute;
         top: 0;
@@ -73,7 +91,7 @@
     &.alerts {
       span {
         @include border-radius($sub-baseline/2);
-        background-color: #333;
+        background-color: #ccc;
         color: #fff;
         font-size: .5em;
         padding: $sub-baseline/2 $sub-baseline;

@@ -1,11 +1,14 @@
 .status-bar {
   @include border-radius($baseline);
-  background-color: #fff;
+  @include clear;
+  background-color: #ccc;
   height: $baseline;
-  position: absolute;
-    top: $baseline;
-    right: $baseline*3;
-    left: $baseline*8;
+  position: relative;
+
+  // position: absolute;
+  //   top: $baseline;
+  //   right: $baseline*3;
+  //   left: $baseline*8;
   .percent-complete {
     @include border-radius($baseline);
     background-color: #666;

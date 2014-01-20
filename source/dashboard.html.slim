@@ -8,90 +8,106 @@ header role="banner"
 section#current-competencies
   h2 Current (or required) Competencies
 
-  .four-columns.competency-pod
-    img src="" alt=""
-    h3 Art
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+  .competency-pod
+    .competency-details
+      img src="" alt=""
+      h3 Art
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      // status - what is being complete?
+    .status-bar <span class="percent-complete" style="width: 75%"></span> <span class="status-context">63/82</span>
+    ul.competency-list
+      li
+        a.competency-link href="#" Digital Arts: Aesthetics
+        a.button-small href="/competency-detail" Resume
+      li
+        a.competency-link href="#" Connection Among the Visual Arts
+        a.button-small href="#" Request
+      li
+        a.competency-link href="#" Traditional Arts
+        a.button-small href="#" Request
+      li
+        a.competency-link href="#" Painting Techniques
+        a.button-small href="#" Request
     footer
-      a.button href="#" Resume
-      .status-bar <span class="percent-complete" style="width: 75%"></span> <span class="status-context">63/82</span>
-  .four-columns.competency-pod
-    img src="" alt=""
-    h3 Business
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      a.toggle-competencies href="#" <span class="toggle-name">Show</span> 4 Competencies
+
+  .competency-pod
+    .competency-details
+      img src="" alt=""
+      h3 Business
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    .status-bar <span class="percent-complete" style="width: 98%"></span> <span class="status-context">19/20</span>
     footer
-      a.button href="#" Resume
-      .status-bar <span class="percent-complete" style="width: 98%"></span> <span class="status-context">19/20</span>
-  .four-columns.omega.competency-pod
-    img src="" alt=""
-    h3 Mathmatics
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      a.toggle-competencies href="#" <span class="toggle-name">Show</span> 10 Competencies
+      
+  .competency-pod
+    .competency-details
+      img src="" alt=""
+      h3 Mathmatics
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    .status-bar <span class="percent-complete" style="width: 25%"></span> <span class="status-context">25/100</span>
     footer
-      a.button href="#" Resume
-      .status-bar <span class="percent-complete" style="width: 25%"></span> <span class="status-context">25/100</span>
-  .four-columns.competency-pod
-    img src="" alt=""
-    h3 World Languages
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      a.toggle-competencies href="#" <span class="toggle-name">Show</span> 2 Competencies
+      
+  .competency-pod
+    .competency-details
+      img src="" alt=""
+      h3 World Languages
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    .status-bar <span class="percent-complete" style="width: 20%"></span> <span class="status-context">63/82</span>
     footer
-      a.button href="#" Resume
-      .status-bar <span class="percent-complete" style="width: 20%"></span> <span class="status-context">63/82</span>
-  .four-columns.competency-pod
+      a.toggle-competencies href="#" <span class="toggle-name">Show</span> 8 Competencies
+      
+  .competency-pod
     img src="" alt=""
     h3 Technology
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    .status-bar <span class="percent-complete" style="width: 50%"></span> <span class="status-context">19/20</span>
     footer
-      a.button href="#" Resume
-      .status-bar <span class="percent-complete" style="width: 50%"></span> <span class="status-context">19/20</span>
+      a.toggle-competencies href="#" <span class="toggle-name">Show</span> 3 Competencies
+      
 
 
 // Make these 50/50? Are competencies and the individual badges shared across various competencies? If so, maybe outline the badges that have been taken in other competencies that apply to suggestions so a student can see which ones would be beneficial to complete.
 section#suggested-competencies
   h2 Suggested Competencies
 
-  .four-columns.competency-pod
+  .competency-pod
     img src="" alt=""
     h3 Physical Education
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
     footer
-      a.button href="#" Begin
+      a.button href="#" Request
       .status-bar <span class="percent-complete" style="width: 0%"></span> <span class="status-context">0/21</span>
-  .four-columns.competency-pod
+  .competency-pod
     img src="" alt=""
     h3 Social Studies
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
     footer
-      a.button href="#" Begin
+      a.button href="#" Request
       .status-bar <span class="percent-complete" style="width: 0%"></span> <span class="status-context">0/20</span>
 
 section#completed-competencies
   h2 Completed Competencies
 
-  .four-columns.competency-pod
+  .competency-pod
     img src="" alt=""
     h3 Digital Art
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
     footer
       a.button href="#" Review
       .status-bar <span class="percent-complete" style="width: 100%"></span> <span class="status-context">21/21</span>
-  .four-columns.competency-pod
+  .competency-pod
     img src="" alt=""
     h3 Photography
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
     footer
       a.button href="#" Review
       .status-bar <span class="percent-complete" style="width: 100%"></span> <span class="status-context">20/20</span>
-  .four-columns.omega.competency-pod
+  .competency-pod
     img src="" alt=""
     h3 Computer Science
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
     footer
       a.button href="#" Review
       .status-bar <span class="percent-complete" style="width: 100%"></span> <span class="status-context">20/20</span>
-
-section#completed-competencies
-  h2 Customize Your Own Competency
-  .five-columns
-    p You can design your own competencies that match how and what you prefer to learn. (This could something a bit more descriptive. We'll clean this area up with some icons and design pieces that teach about the process of designing a competency).
-  .seven-columns.omega.competency-pod-blank
-    h3 Design your competency
