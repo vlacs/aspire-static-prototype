@@ -4,7 +4,7 @@
 activate :livereload
 activate :relative_assets
 activate :directory_indexes
-activate :syntax, :line_numbers => true
+# activate :syntax, :line_numbers => true
 
 # ----------------------------------------------
 # Page Processing
