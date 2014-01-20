@@ -51,6 +51,9 @@
   position: relative;
   z-index: $z-index-fixed;
   min-height: 100%;
+  body[data-search-active="true"] & {
+    padding-top: $baseline*15;
+  }
 }
 
 // Onboarding
@@ -89,6 +92,110 @@
           left: -$baseline*4.5;
         width: $baseline*4;
       }
+    }
+  }
+}
+
+// Search Results
+// ----------------------------------------------------------------
+.search-results {
+  @include clear;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  ul {
+    @include clear;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .result-parent {
+    border-bottom: 1px solid #ccc;
+    padding: $baseline 0;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  .result-details {
+    padding: 0 $baseline*20 $baseline $baseline*2;
+    position: relative;
+    .show-children,
+    .primary-action {
+      line-height: $baseline*2;
+      height: $baseline*2;
+      margin-top: -($baseline*2)/2;
+      position: absolute;
+        top: 50%;
+        right: 0;
+    }
+  }
+  .delete-action {
+    background-color: #333;
+    color: #efefef;
+    height: 20px;
+    position: absolute;
+      top: 0;
+      left: 0;
+    text-indent: -9999px;
+    width: 20px;
+    &:before {
+      content: "X";
+      line-height: 20px;
+      position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+  .result-children {
+    display: none;
+    padding-left: $baseline*2;
+    .competency-box {
+      @include span-columns(4);
+    }
+    .competency-box:nth-child(3n) {
+      @include omega;
+    }
+  }
+}
+.competency-box {
+  border: 1px solid #ccc;
+  margin-bottom: $baseline;
+  padding: $baseline $baseline $baseline*3 $baseline;
+  position: relative;
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  .actions {
+    background-color: #ccc;
+    padding: $baseline;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+  .primary-action,
+  .show-children {
+    float: right;
+  }
+  .grade {
+    float: left;
+  }
+  &[data-status] {
+    &:after {
+      @include border-radius(50px);
+      background-color: #666;
+      content: "Status";
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+        top: $sub-baseline;
+        right: $sub-baseline;
+      text-align: center;
+      width: 40px;
     }
   }
 }

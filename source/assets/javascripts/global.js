@@ -11,7 +11,25 @@ jQuery(document).ready(function($) {
   });
 
   $('#search-control').on('click', function (event) {
-    $('#search').toggle();
+    var body = $('body'),
+        searchControl = $(this),
+        searchForm    = $('#search');
+
+    if (body.attr('data-search-active') == "true") {
+      body.attr('data-search-active', "false");
+      searchControl.attr('data-active', "false");
+      searchForm.attr('data-active', "false");
+    } else {
+      body.attr('data-search-active', "true");
+      searchControl.attr('data-active', "true");
+      searchForm.attr('data-active', "true");
+    }
+    event.preventDefault();
+  });
+
+  $('.result-details').find('.show-children').on('click', function(event){
+    var childrenItems = $(this).parent().next();
+    childrenItems.toggle();
     event.preventDefault();
   });
 });

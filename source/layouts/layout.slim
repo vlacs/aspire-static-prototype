@@ -24,7 +24,7 @@ head
   == stylesheet_link_tag "global"
   == javascript_include_tag "libs/modernizr"
 
-  body id="#{current_page.data.id}"
+  body id="#{current_page.data.id}" data-search-active="true"
     main#content role="main"
       == yield
 
@@ -33,7 +33,7 @@ head
 
         a#side-nav-control href="#" data-active="false" Menu
 
-        a#search-control href="#" data-active="false" Search
+        a#search-control href="#" data-active="true" Search
 
         ul
           li.alerts: a href="#alerts" Alerts <span class="alert-count">23</span>
@@ -42,7 +42,7 @@ head
             a href="#profile" Bermon Painter
           li.logout: a href="#logout" Logout
 
-    form#search data-active="false"
+    form#search data-active="true" action="/search-results/"
       h2 Search for classes & competencies
       input type="search" placeholder="Search..."
       button.button-large type="submit" Search
