@@ -199,3 +199,17 @@
     }
   }
 }
+
+// Search Results Grid
+// ----------------------------------------------------------------
+.search-results-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .competency-box {
+    @include span-columns(4);
+  }
+  .competency-box:nth-child(3n) {
+    @include omega;
+  }
+}
