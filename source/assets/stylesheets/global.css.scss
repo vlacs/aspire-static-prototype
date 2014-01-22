@@ -39,6 +39,14 @@
 @import "modules/search";
 
 // To be moved into modules/partials
+.button-large {
+  background-color: #333;
+  color: #efefef;
+  display: inline-block;
+  padding: $baseline $baseline*2;
+  text-decoration: none;
+}
+
 
 // Content
 // ----------------------------------------------------------------
