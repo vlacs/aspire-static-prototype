@@ -6,11 +6,11 @@ id: admin
 .config-intro
   form id="config-onboarding" action="/config/onboarding" method="post"
    h3 Greeting text:
-   input type="text" placeholder="Welcome"
+   input name="greeting" type="text" placeholder="Welcome"
    br
    br
    h3 Onboarding steps:
-   textarea style="width:50%; height:30em;" placeholder="Enter onboarding steps here. Each paragraph counts as a separate step; do not number them."
+   textarea name="steps" style="width:50%; height:30em;" placeholder="Enter onboarding steps here. Each paragraph counts as a separate step; do not number them."
    br
    br
-   input type="submit"
+   button type="submit" Submit
