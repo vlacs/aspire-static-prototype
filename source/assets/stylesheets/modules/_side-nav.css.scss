@@ -1,9 +1,18 @@
 #side-nav {
-  background-color: #333;
-  color: #ccc;
+  background-color: #ccc;
   position: fixed;
-    top: 0;
+    top: $baseline*3;
     bottom: 0;
     left: 0;
+  z-index: 1001;
+  &[data-active="false"] {
+    display: none;
+  }
+  &[data-active="true"] {
+    display: block;
+  }
   width: $baseline*12;
+  a {
+      font-size: 2em;
+  }
 }
