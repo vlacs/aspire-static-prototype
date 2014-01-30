@@ -4,15 +4,15 @@ id: admin
 ---
 
 h1 Application Administration
-#config-onboarding
+.config-onboarding
   h2 Configure Onboarding
   form id="config-onboarding" action="/config/onboarding" method="post"
    h3 Greeting text:
-   input name="greeting" type="text" placeholder="Welcome"
+   input id="greeting" name="greeting" type="text" placeholder="Welcome"
    br
    br
    h3 Onboarding steps:
-   textarea name="steps" style="width:50%; height:30em;" placeholder="Enter onboarding steps here. Each paragraph counts as a separate step; do not number them."
+   textarea id="steps" name="steps" style="width:50%; height:30em;" placeholder="Enter onboarding steps here. Each paragraph counts as a separate step; do not number them."
    br
    br
    button type="submit" Submit
