@@ -1,19 +1,15 @@
-# Static Prototype
+# aspire-static-prototype
 
-## Installation
+Static prototype for the look and feel of Aspire.
 
-The prototype was created with the static site generator Middleman. It requires Ruby to be installed. If you're using a Mac, Ruby is installed by default. If you're using Windows, you'll need to install Ruby first using the [RubyInstaller](http://rubyinstaller.org/).
+The project is currently using sass and compass to compile CSS.
+The compiled versions of the css are included in the repository.
 
-	$ gem install bundler
+# How to view
 
-Bundler is a package manager for Ruby that manages the dependencies that will need to be installed to run Middleman. Once bundler is installed then:
-
-	$ bundle install
-
-## Start Middleman
-
-This will install all of the required dependencies. You can now start up Middleman:
-
-	$ bundle exec middleman
-
-This will start up a Sinatra server running Middleman. You can now view the prototype at [http://localhost:4567](http://localhost:4567).
+```
+git clone https://github.com/vlacs/aspire-static-prototype
+cd aspire-static-prototype
+python -m SimpleHTTPServer
+```
+Now point your browser to http://localhost:8000/

@@ -1,0 +1,19 @@
+@import "variables";
+
+
+$sidemenu-bg: #F8F8F8;
+$sidemenu-border: #E7E7E7;
+
+$navbar-inverse-color: #DDD;
+$navbar-inverse-bg: lighten(#222, 8%);
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%);
+
+$navbar-button-color: white;
+$navbar-button-bg: $navbar-inverse-bg;
+$navbar-button-border: darken($navbar-button-bg, 40%);
+$navbar-button-color-hover: white;
+$navbar-button-bg-hover: $navbar-button-bg;
+$navbar-button-border-hover: lighten($navbar-button-border, 60%);
+
+@import "bootstrap";
+@import "compass/css3";

@@ -1,0 +1,146 @@
+/*
+ * Author: github.com/migeorge (Mike George)
+ */
+
+@import "base";
+
+/*
+ * Style tweaks
+ */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @extend html;
+  padding-top: 70px;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+
+/*
+ * Off canvas menu
+*/
+
+.sidebar-offcanvas {
+  @include single-transition(all, .25s, ease-out);
+
+  background-color: $sidemenu-bg;
+  border-color: $sidemenu-border;
+
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  margin-left: -20%;
+  z-index: 1;
+
+  ul {
+    li {
+      border-bottom: 1px solid $sidemenu-border;
+    }
+  }
+}
+
+.sidebar-offcanvas.active {
+  border-right: 1px solid $sidemenu-border;
+  margin-left: 0;
+}
+
+#page-wrapper {
+  @include single-transition(all, .25s, ease-out);
+
+  position: inherit;
+  margin: 0 0 0 0;
+  padding: 0 30px;
+}
+
+#page-wrapper.sidebar-active {
+  position: inherit;
+  margin: 0 0 0 20%;
+  padding: 0 30px;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-controls {
+  margin-left: 10px;
+
+  button {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    color: $navbar-button-color;
+    background-color: $navbar-button-bg;
+    border-color: $navbar-button-border;
+  }
+  button:hover {
+    background-color: $navbar-button-bg-hover;
+    border-color: $navbar-button-border-hover;
+    color: $navbar-button-color-hover;
+  }
+  button:focus {
+    background-color: $navbar-button-bg-hover;
+    border-color: $navbar-button-border-hover;
+    outline: none;
+    color: $navbar-button-color-hover;
+  }
+  button:active {
+    outline: none;
+  }
+}
+
+.navbar-header {
+  text-align: center;
+  float: none;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .navbar-brand
+  {
+    color: $navbar-inverse-color;
+    padding-top: 11px;
+    width: 100%;
+
+    img {
+      width: 23px;
+    }
+  }
+}
+
+/*
+ * Top Search
+ */
+
+.top-search {
+  @include single-transition(height, .25s, linear);
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 25px;
+  height: 0px;
+  overflow: hidden;
+
+  input {
+    width: 50% !important;
+    height: 50px;
+    font-size: 26px;
+  }
+
+  button {
+    height: 50px;
+  }
+}
+
+.top-search.active {
+  height: 113px;
+}

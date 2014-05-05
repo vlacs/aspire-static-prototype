@@ -1,117 +1,26 @@
-# ----------------------------------------------
-# Basic Setup
-# ----------------------------------------------
-activate :livereload
-activate :relative_assets
-activate :directory_indexes
-# activate :syntax, :line_numbers => true
-
-# ----------------------------------------------
-# Page Processing
-# ----------------------------------------------
-require 'slim'
-set :slim, :pretty => true
-
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :autolink => true, :smartypants => true
-
-# ----------------------------------------------
-# CSS Processing
-# ----------------------------------------------
-# Susy grids in Compass
-# First: gem install susy --pre
-require 'susy'
-
-# ----------------------------------------------
-# Page options, layouts, aliases and proxies
-# ----------------------------------------------
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
-# Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+require 'bootstrap-sass'
+# Require any additional compass plugins here.
 
 
+# Set this to the root of your project when deployed:
+http_path = "/"
+css_dir = "stylesheets"
+sass_dir = "sass"
+images_dir = "images"
+javascripts_dir = "javascripts"
 
-# ----------------------------------------------
-# Helpers
-# ----------------------------------------------
+# You can select your preferred output style here (can be overridden via the command line):
+# output_style = :expanded or :nested or :compact or :compressed
 
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+# To enable relative paths to assets via compass helper functions. Uncomment:
+# relative_assets = true
 
-# Methods defined in the helpers block are available in templates
-helpers do
-  def inline_code(code)
-    '<code>' + escape_html(code.to_s) + '</code>'
-  end
-  # Calculate the years for a copyright
-  def copyright_years(start_year)
-    end_year = Date.today.year
-    if start_year == end_year
-      start_year.to_s
-    else
-      start_year.to_s + '-' + end_year.to_s
-    end
-  end
-end
+# To disable debugging comments that display the original location of your selectors. Uncomment:
+# line_comments = false
 
-# ----------------------------------------------
-# Directories
-# ----------------------------------------------
-set :css_dir, 'assets/stylesheets'
 
-set :js_dir, 'assets/javascripts'
-
-set :images_dir, 'assets/images'
-
-# ----------------------------------------------
-# International
-# ----------------------------------------------
-# activate :translation_helper
-# activate :directory_indexes
-# activate :i18n, :mount_at_root => :en
-
-# ----------------------------------------------
-# Build-specific configuration
-# ----------------------------------------------
-configure :build do
-  # Change Compass configuration
-  compass_config do |config|
-    # config.preferred_syntax   = :sass
-    config.output_style = :compressed
-    config.sass_options = { :line_comments => false}
-  end
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
-
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-end
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+# preferred_syntax = :sass
+# and then run:
+# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
